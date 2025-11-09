@@ -1,7 +1,11 @@
-const convertToCelsius = function() {
+const convertToCelsius = function ( tempFahr ) {
+  if ( typeof ( tempFahr ) !== "number" ) return "ERROR";
+  return Math.round( ( tempFahr - 32 ) * 5 / 9 * 10 ) / 10
 };
 
-const convertToFahrenheit = function() {
+const convertToFahrenheit = function ( tempCel ) {
+  if ( typeof ( tempCel ) !== "number" ) return "ERROR";
+  return Math.round( ( tempCel * 9 / 5 + 32 ) * 10 ) / 10;
 };
 
 // Do not edit below this line
